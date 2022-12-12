@@ -173,6 +173,11 @@ tbody td {
     cursor: pointer;
 }
 
+.name-anime img {
+    width: 4.5rem;
+    height: 6rem;
+}
+
 .remove {
     color: rgb(221, 0, 0);
     font-size: 2rem;
@@ -201,4 +206,38 @@ tbody tr:nth-child(odd) {
 .content p {
     padding: 0 .6rem;
     font-size: 1.4rem;
+}
+
+.cancel-modal {
+    color: rgb(206, 40, 40);
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    cursor: pointer;
+}
+.cancel-modal:hover {
+    color: red;
+}
+
+.remove:hover {
+    cursor: pointer;
+    color: rgb(122, 1, 1);
+}
+
+.modal-error {
+    position: absolute;
+    background-color: rgb(206, 40, 40);
+    top: -60px;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    transition: all .6s;
+}
+
+.error-open {
+    top: 0;
 }

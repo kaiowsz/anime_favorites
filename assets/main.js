@@ -1,14 +1,18 @@
 const buttonSearch = document.querySelector('.button-search')
 
-buttonSearch.addEventListener('click', searchAnime)
 
 const input = document.querySelector('#searchtext')
 
 // screens
 const modal = document.querySelector('.modal')
+const buttonModal = document.querySelector('.cancel-modal')
 const loading = document.querySelector('.loading')
+const errorModal = document.querySelector('.modal-error')
 
 let dataSearch;
+
+buttonModal.addEventListener('click', cancelModal)
+buttonSearch.addEventListener('click', searchAnime)
 
 async function searchAnime() {
     const animeName = document.getElementById('search').value
@@ -21,6 +25,10 @@ async function searchAnime() {
     const { data } = animes
 
     dataSearch = [...data]
+
+    if(dataSearch.length == 0) {
+        openError()
+    }
 
     loading.classList.toggle('openloading')
 
@@ -46,7 +54,6 @@ function createCards(cards) {
         </div>`
 
         
-        console.log(element)
         const card = document.createElement('div')
         card.classList.add('card')
         card.innerHTML = innerCard
@@ -112,7 +119,33 @@ function createTr(required) {
 
     tr.querySelector('.year').textContent = required.year
 
+    if(required.year == null) {
+        tr.querySelector('.year').textContent = 'Unknown'
+    }
+
     tbody.append(tr)
 
     modal.classList.toggle('on')
+    clearSearchs()
+}
+
+function cancelModal() {
+    modal.classList.toggle('on')
+    clearSearchs()
+}
+
+function clearSearchs() {
+    const allCards = modal.querySelectorAll('.card')
+
+    allCards.forEach(card => {
+        card.remove()
+    })
+}
+
+function openError() {
+    modal.classList.toggle('on')
+    errorModal.classList.add('error-open')
+    setTimeout(() => {
+        errorModal.classList.remove('error-open')
+    }, 2000);
 }

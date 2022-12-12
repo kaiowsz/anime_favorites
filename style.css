@@ -1,0 +1,204 @@
+:root {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(#1b1b1b, #1b1b1b);
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    max-height: 350px;
+    border-radius: 15px;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #d3d3d3;
+}
+
+.card h1 {
+    text-align: center;
+    padding: 1.6rem;
+}
+
+.card-image {
+    overflow:hidden;
+    height: 30rem;
+}
+
+.card img {
+    border-radius: 1.5rem 1.5rem 0 0;
+    max-width: 100%;
+    transition: .5s;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.loading {
+    background: #000 url('loader.gif') no-repeat center;
+    position: absolute;
+    inset: 0;
+    display: none;
+}
+
+.openloading {
+    display: inherit;
+}
+
+.modal {
+    background-color: rgb(12, 12, 12);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.on {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.container-search {
+    display: flex;
+    width: 650px;
+    justify-content: flex-end;
+    margin: 2rem auto;
+    background-color: transparent;
+}
+
+#search { /* #search is the input text */
+    border: 0;
+    padding-left: .6rem;
+    border-radius: .5rem 0 0 .5rem;
+    font-family: 'Source Sans Pro';
+}
+
+#search:focus {
+    outline: 1px solid rgb(12, 12, 12);
+}
+
+.button-search {
+    border-radius: 0 .5rem .5rem 0;
+    background-color: rgb(138, 138, 138);
+    color: white;
+    padding: .8rem;
+    border: 0;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.button-search:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+#app {
+    font-size: 1.6rem;
+    padding: 3rem;
+    gap: 2rem;
+    color: white;
+    width: 100%;
+}
+
+#app h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+#app p {
+    text-align: center;
+}
+
+table {
+    background-color:rgb(170, 170, 170);
+    margin: auto;
+    border-radius: .5rem;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    text-align: left;
+}
+
+thead th {
+    padding: .7rem 1rem;
+    background-color:rgb(1, 117, 126);
+}
+
+thead th:first-child {
+    border-top-left-radius: .5rem;
+}
+
+thead th:last-child {
+    border-top-right-radius: .5rem;
+}
+
+
+tbody td {
+    padding: .7rem 1rem;
+}
+
+.name-anime {
+    max-width: 250px;
+}
+
+.name-anime a p{
+    max-width: 250px;
+    overflow: hidden;
+}
+
+.name-anime a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.remove {
+    color: rgb(221, 0, 0);
+    font-size: 2rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(156, 156, 156);
+}
+
+.button-add {
+    display: block;
+    margin: 1rem auto;
+    border: 0;
+    padding: .4rem .8rem;
+    border-radius: .5rem;
+    background-color: rgb(28, 121, 28);
+    cursor: pointer;
+    color: white;
+    transition: all .5s;
+}
+
+.button-add:hover {
+    background-color: rgb(5, 82, 5); 
+}
+
+.content p {
+    padding: 0 .6rem;
+    font-size: 1.4rem;
+}

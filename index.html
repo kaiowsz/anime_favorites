@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Favorite List</title>
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app">
+        <h1>Anime List Favorite</h1>
+
+        <p>List your favorite animes or use it to watch later. Search the anime using the name.</p>
+
+        
+            <div class="container-search">
+                <input type="text" id="search">
+                <button class="button-search">&plus;</button>
+            </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Rank</th>
+                    <th>Score</th>
+                    <th>Year</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="name-anime">
+                        <a href="https://myanimelist.net/anime/40748/Jujutsu_Kaisen" target="_blank">
+                            <img src="https://cdn.myanimelist.net/images/anime/1171/109222t.jpg" alt="">
+                            <p>Jujutsu Kaisen</p>
+                        </a>
+                    </td>
+                    <td class="rank">#24</td>
+                    <td class="score">8.66</td>
+                    <td class="year">2020</td>
+                    <td class="remove">&times;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="loading"></div>
+
+    <div class="modal">
+        <div class="card">
+            <div class="card-image">
+                <img src="https://cdn.myanimelist.net//images//anime//1171//109222.jpg" alt="anime photo image">
+            </div>
+            <div class="content">
+                <h1>Jujutsu Kaisen</h1>
+                <p>Rank: <span class="eps-card">#24</span></p>
+                <p>Year: <span class="year-card">2020</span></p>
+                <p>Score: <span class="score-card">8.66</span></p>
+                <button class="button-add">Add</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./assets/main.js"></script>
+</body>
+</html>
